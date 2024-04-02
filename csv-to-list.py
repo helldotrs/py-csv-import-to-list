@@ -1,20 +1,13 @@
-
-
 import csv
- 
-# Open the CSV file for reading
-with open('employees.csv', mode='r') as file:
-    # Create a CSV reader with DictReader
-    csv_reader = csv.DictReader(file)
- 
-    # Initialize an empty list to store the dictionaries
-    data_list = []
- 
-    # Iterate through each row in the CSV file
-    for row in csv_reader:
-        # Append each row (as a dictionary) to the list
-        data_list.append(row)
- 
-# Print the list of dictionaries
-for data in data_list:
-    print(data)
+def import_csv_as_list(file_name = file.csv)
+
+    with open(f'{file_name}', mode='r') as file:
+        # create csv reader
+        csv_reader = csv.DictReader(file)
+
+        data_list = []
+
+        for row in csv_reader:
+            data_list.append(row)
+
+    return data_list
